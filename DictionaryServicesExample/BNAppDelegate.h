@@ -8,8 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface BNAppDelegate : NSObject <NSApplicationDelegate>
+@interface BNAppDelegate : NSObject <NSApplicationDelegate, NSTextViewDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+
+
+@property (unsafe_unretained) IBOutlet NSTextView *srcTextView;
+@property (unsafe_unretained) IBOutlet NSTextView *defTextView;
+@property (weak) IBOutlet NSPopUpButton *modePopUp;
 
 @end
